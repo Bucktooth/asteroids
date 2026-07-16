@@ -10,7 +10,7 @@ from shot import Shot
 def main():
     pygame.init()
     Clock = pygame.time.Clock()
-    dt = 0
+    dt = 0.0
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
     print("Screen width: 1280")
     print("Screen height: 720")
@@ -43,7 +43,7 @@ def main():
             for shot in shots:
                 if shot.collides_with(asteroid):
                     log_event("asteroid_shot")
-                    asteroid.kill(), shot.kill()
+                    asteroid.split(), shot.kill()
         pygame.display.flip()
         dt = Clock.tick(60) / 1000
 
